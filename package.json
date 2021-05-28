@@ -1,0 +1,15 @@
+{
+  "name": "5sg-blog-template",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "5sg",
+    "dev": "5sg --serve"
+  },
+  "dependencies": {
+    "5sg": "^0.0.4",
+    "svelte": "^3.38.2"
+  }
+}

@@ -1,0 +1,98 @@
+:root {
+  --bg: #fff;
+  --bg-secondary: #eaeaef;
+  --bg-tertiary: #fafafa;
+  --bg-inverse: #32353f;
+  --bg-code: #002b36;
+
+  --primary: #32353f;
+  --inverse: #eee;
+  --accent: #05f4b7;
+  --secondary: #3498db;
+  --tertiary: #e74c3c;
+
+  --shadow: rgba(0, 0, 0, 0.6);
+  --shadow-secondary: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  color: var(--primary);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  overflow-x: auto;
+  max-width: 100%;
+  background: var(--bg-code);
+  color: var(--inverse);
+  padding: 24px;
+  line-height: 2;
+  box-shadow: 4px 4px 4px var(--shadow-secondary);
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a[target]::after {
+  content: '↗';
+  display: inline-block;
+  font-size: 0.75em;
+  margin-left: 4px;
+  vertical-align: text-top;
+  text-decoration: none;
+  color: var(--shadow-secondary);
+  font-weight: bold;
+}
+
+/* anchors #my-id and #my-name generate virtual space above them to correct the scroll too offset from the sticky header */
+/* @see https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+[name]::before,
+[id]::before {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+
+blockquote {
+  border-left: 3px var(--bg-secondary) solid;
+  padding-left: 16px;
+}
