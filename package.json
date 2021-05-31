@@ -9,7 +9,7 @@
     "dev": "5sg --serve"
   },
   "dependencies": {
-    "5sg": "^0.0.5",
+    "5sg": "^0.0.6",
     "svelte": "^3.38.2"
   }
 }
