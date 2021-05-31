@@ -10,7 +10,7 @@
         return dateA > dateB ? -1 : 1;
       });
     const currentIndex = blogPages.findIndex(
-      (node) => node.publicPath === `${nodeData.name}.html`
+      (node) => node.publicPath === `${nodeData.publicPath}`
     );
     const prevPost = currentIndex > 0 && blogPages[currentIndex - 1];
     const nextPost =
